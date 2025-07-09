@@ -3,6 +3,7 @@ import { GlobalStyles } from "@styles/index";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ErrorBoundary from "@components/ErrorBoundary";
 import SEO from "@components/SEO";
+import NavigationIndicator from "@components/Navigation/NavigationIndicator";
 import {
   AppContainer,
   MainContent,
@@ -36,16 +37,21 @@ function App() {
       <ThemeProvider>
         <SEO />
         <GlobalStyles />
+
         <AppContainer>
           <BackgroundDecoration />
+
           <Suspense fallback={<Loading />}>
             <Navigation />
+            <NavigationIndicator />
+
             <MainContent>
               <Hero />
               <Projects />
               <Skills />
               <About />
             </MainContent>
+
             <BackToTop />
           </Suspense>
         </AppContainer>

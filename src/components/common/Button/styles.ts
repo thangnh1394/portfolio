@@ -75,6 +75,29 @@ export const StyledButton = styled.button<StyledButtonProps>`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translate(-50%, -50%);
+      animation: ripple 0.6s ease-out;
+    }
+  }
+
+  @keyframes ripple {
+    to {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
 `;
 
 export const ButtonIcon = styled.span`

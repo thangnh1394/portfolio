@@ -19,14 +19,38 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    sourcemap: true,
+    sourcemap: false,
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom"],
           "styled-vendor": ["styled-components"],
           "animation-vendor": ["framer-motion"],
+          "icons-vendor": ["react-icons"],
         },
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name ? assetInfo.name.split(".") : ["asset"];
+          const extType = info[info.length - 1];
+
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            return `assets/img/[name]-[hash][extname]`;
+          } else if (/woff|woff2|eot|ttf|otf/i.test(extType)) {
+            return `assets/fonts/[name]-[hash][extname]`;
+          } else if (/css/i.test(extType)) {
+            return `assets/css/[name]-[hash][extname]`;
+          } else {
+            return `assets/[name]-[hash][extname]`;
+          }
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
   },
