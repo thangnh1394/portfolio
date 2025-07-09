@@ -1,2 +1,0 @@
-import{j as e}from"./index-CEPyOHJs.js";import{S as n,T as o,a as c,b as l,c as x}from"./styles-CLPj2Uue.js";const S=({children:t,id:s,className:r,dark:a=!1,fullHeight:i=!1})=>e.jsx(n,{id:s,className:`${r} section-padding`,dark:a,fullHeight:i,children:t}),d=({title:t,subtitle:s,align:r="center",decorated:a=!0})=>e.jsxs(o,{align:r,children:[e.jsxs(c,{children:[t,a&&e.jsx(l,{})]}),s&&e.jsx(x,{children:s})]});export{S,d as a};
-//# sourceMappingURL=index-DQi6GrOP.js.map
