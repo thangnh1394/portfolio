@@ -1,0 +1,1 @@
+{"version":3,"file":"index-DeFPBesi.js","sources":["../../src/components/About/index.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst About: React.FC = () => {\r\n  return <nav>About Component</nav>;\r\n};\r\n\r\nexport default About;\r\n"],"names":["About","jsx"],"mappings":"+GAEA,MAAMA,EAAkB,IACfC,EAAAA,IAAC,OAAI,SAAA,iBAAA,CAAe"}

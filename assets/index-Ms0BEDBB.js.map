@@ -1,0 +1,1 @@
+{"version":3,"file":"index-Ms0BEDBB.js","sources":["../../src/components/BackToTop/index.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst BackToTop: React.FC = () => {\r\n  return <nav>BackToTop Component</nav>;\r\n};\r\n\r\nexport default BackToTop;\r\n"],"names":["BackToTop","jsx"],"mappings":"+GAEA,MAAMA,EAAsB,IACnBC,EAAAA,IAAC,OAAI,SAAA,qBAAA,CAAmB"}
